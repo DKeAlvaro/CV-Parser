@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Scorer - Professional Resume Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CV Score Master</h1>
+        <div class="score-counter hidden">
+            <span class="total-analyzed">Total CVs Analyzed: <strong>0</strong></span>
+        </div>
+        
+        <div id="drop-zone" class="drop-zone">
+            <div class="drop-zone-content">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points='17 8 12 3 7 8'/%3E%3Cline x1='12' y1='3' x2='12' y2='15'/%3E%3C/svg%3E" alt="Upload icon" class="upload-icon">
+                <p>Drop your CV to get instant feedback<br>or<br><span class="browse">Choose a file</span></p>
+                <div class="upload-tips">
+                    <span>Get personalized insights</span>
+                    <span>Professional analysis</span>
+                    <span>Improve your chances</span>
+                </div>
+            </div>
+            <input type="file" id="file-input" accept=".pdf" hidden>
+        </div>
+        
+        <div id="results" class="results hidden">
+            <div class="score-badge">
+                <div class="badge-circle">
+                    <span class="total-score">0</span>
+                    <span class="max-score">/10</span>
+                </div>
+                <span class="score-label">Overall Score</span>
+            </div>
+            
+            <h2>CV Analysis Results</h2>
+            
+            <div class="cv-preview">
+                <img id="cv-image" alt="CV Preview" />
+            </div>
+            
+            <div class="scores">
+                <div class="score-item">
+                    <label><i class="fas fa-star"></i> Content Score</label>
+                    <div class="score-bar">
+                        <div id="content-score" class="score-fill"></div>
+                        <span class="score-number"></span>
+                    </div>
+                </div>
+                <div class="score-item">
+                    <label><i class="fas fa-check-circle"></i> Cleanliness Score</label>
+                    <div class="score-bar">
+                        <div id="cleanliness-score" class="score-fill"></div>
+                        <span class="score-number"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="parsed-info">
+                <h3><i class="fas fa-user"></i> Parsed Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Name:</label>
+                        <p id="candidate-name"></p>
+                    </div>
+                    <div class="info-item">
+                        <label>Email:</label>
+                        <p id="candidate-email"></p>
+                    </div>
+                    <div class="info-item">
+                        <label>Phone:</label>
+                        <p id="candidate-phone"></p>
+                    </div>
+                    <div class="info-item">
+                        <label>Location:</label>
+                        <p id="candidate-location"></p>
+                    </div>
+                    <div class="info-item full-width">
+                        <label>Education:</label>
+                        <p id="candidate-education"></p>
+                    </div>
+                    <div class="info-item full-width">
+                        <label>Experience:</label>
+                        <p id="candidate-experience"></p>
+                    </div>
+                    <div class="info-item full-width">
+                        <label>Skills:</label>
+                        <p id="candidate-skills"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feedback">
+                <div class="feedback-section">
+                    <h3><i class="fas fa-thumbs-up"></i> Strengths</h3>
+                    <p id="good-points"></p>
+                </div>
+                <div class="feedback-section">
+                    <h3><i class="fas fa-lightbulb"></i> Areas for Improvement</h3>
+                    <p id="bad-points"></p>
+                </div>
+                <div class="feedback-section">
+                    <h3><i class="fas fa-comment-dots"></i> Additional Notes</h3>
+                    <p id="notes"></p>
+                </div>
+            </div>
+            
+            <div class="share-buttons">
+                <button class="share-button twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </button>
+                <button class="share-button linkedin">
+                    <i class="fab fa-linkedin"></i> Share on LinkedIn
+                </button>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="try-again-btn">
+                    <i class="fas fa-redo"></i> Try Another CV
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
