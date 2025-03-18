@@ -4,10 +4,7 @@ CV/Resume scorer system that analyzes resumes using GPT-4o Vision.
 
 ## Demo
 
-<video controls>
-  <source src="https://raw.githubusercontent.com/DKeAlvaro/CV-Parser/main/video_test.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Demo](https://raw.githubusercontent.com/DKeAlvaro/CV-Parser/main/video_test.mp4)](https://raw.githubusercontent.com/DKeAlvaro/CV-Parser/main/video_test.mp4)
 
 ## How to use
 
