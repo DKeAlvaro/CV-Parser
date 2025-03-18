@@ -1,6 +1,6 @@
 # CV Scoring System
 
-CV/Resume scorer system that analyzes resumes using GPT-4o Vision.
+CV/Resume scorer system that PARSEs and analyzes resumes using GPT-4o Vision.
 
 ## Demo
 
